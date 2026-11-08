@@ -7,7 +7,7 @@
 公开仓库：[mileson/stockflow-cli](https://github.com/mileson/stockflow-cli)。安装或更新当前版本：
 
 ```sh
-npm install --global "https://github.com/mileson/stockflow-cli/releases/download/v0.1.1/stockflow-cli-0.1.1.tgz"
+npm install --global "https://github.com/mileson/stockflow-cli/releases/download/v0.1.2/stockflow-cli-0.1.2.tgz"
 ```
 
 本地源码也可执行 `npm install -g .`。
@@ -106,3 +106,7 @@ stockflow export --job-id products-001 --output products-minus20.csv \
 AI 推荐流程：`schema collect` → `doctor` → `collect --dry-run` → `collect` → 检查回执 → 向用户交付 `artifact.path`。需要调整价格时使用 `export`。本工具只采集与生成文件，不执行妙手导入、上货或公开发布。
 
 CLI 采集与面板共用 task-overlay.js 的品牌图标、渐变边缘和点阵波纹，显示当前商品序号 / 总数。浮层“停止”会在当前商品结束后停止队列并导出已有结果；剩余链接可通过 jobs resume 继续。正常结束、停止和失败均清理浮层；登录验证时先移除浮层再交给用户。CLI 包内携带图标，不依赖浏览器安装插件。
+
+## 从早期版本升级
+
+若安装时提示 stockflow 命令已存在，先核对 `npm ls -g --depth=0` 和命令路径；确认属于早期的 `stockflow-workspace` 包后，执行 `npm uninstall --global stockflow-workspace`，再运行上方安装命令。采集记录仍保留在 `~/.stockflow`。不要用 `--force` 覆盖其他软件的命令。

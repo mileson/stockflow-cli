@@ -7,7 +7,7 @@
 公开仓库：[mileson/stockflow-cli](https://github.com/mileson/stockflow-cli)。安装或更新当前版本：
 
 ```sh
-npm install --global "https://github.com/mileson/stockflow-cli/releases/download/v0.1.1/stockflow-cli-0.1.1.tgz"
+npm install --global "https://github.com/mileson/stockflow-cli/releases/download/v0.1.2/stockflow-cli-0.1.2.tgz"
 ```
 
 本地源码也可执行 `npm install -g .`。

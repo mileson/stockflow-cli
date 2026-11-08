@@ -1,6 +1,6 @@
 {
   "name": "stockflow-cli",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "scripts": {
     "check:cli": "node --check cli/stockflow.cjs && node --check cli/contract.cjs && node --check cli/runner.cjs && node --check cli/store.cjs"
