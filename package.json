@@ -1,0 +1,31 @@
+{
+  "name": "stockflow-cli",
+  "version": "0.1.1",
+  "private": true,
+  "scripts": {
+    "check:cli": "node --check cli/stockflow.cjs && node --check cli/contract.cjs && node --check cli/runner.cjs && node --check cli/store.cjs"
+  },
+  "description": "StockFlow 商品多链接采集与调价导出 CLI",
+  "bin": {
+    "stockflow": "cli/stockflow.cjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "files": [
+    "cli/",
+    "tools/batch-collector/browser.cjs",
+    "tools/batch-collector/model.cjs",
+    "tools/batch-collector/queue.cjs",
+    "stockflow-extension/batch-model.js",
+    "stockflow-extension/batch-capture.js",
+    "stockflow-extension/batch-queue.js",
+    "stockflow-extension/csv-exporter.js",
+    "stockflow-extension/task-overlay.js",
+    "stockflow-extension/icons/icon-48.png"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mileson/stockflow-cli.git"
+  }
+}
